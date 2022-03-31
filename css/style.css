@@ -69,6 +69,18 @@ a {
   .form-label {
     font-size: 16px;
   }
+
+  .restore-password-button {
+    width: 50% !important;
+  }
+
+  .restore-password-h1 {
+    font-size: 30px;
+  }
+
+  .restore-password-h4 {
+    font-size: 16px;
+  }
 }
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
@@ -81,7 +93,7 @@ a {
   }
 
   .form-button {
-    width: 30%;
+    width: 75%;
     background-color: #cf7d1f;
     border-radius: 15px;
     font-size: 15px;
@@ -103,6 +115,10 @@ a {
 
   p {
     font-size: 18px;
+  }
+
+  .restore-password-button {
+    width: 50% !important;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */
