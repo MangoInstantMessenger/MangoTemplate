@@ -49,6 +49,10 @@ a {
   font-size: 20px;
 }
 
+.form-label {
+  font-size: 18px;
+}
+
 .terms-of-service {
   margin-top: 7px;
 }
@@ -60,6 +64,10 @@ a {
 
   .form-button {
     width: 40% !important;
+  }
+
+  .form-label {
+    font-size: 16px;
   }
 }
 /* Extra small devices (phones, 600px and down) */
