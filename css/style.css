@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  color: #fff;
+  color: white;
   font-size: 14px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11,7 +11,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
-  background-color: #fafbfd;
 }
 
 input, button {
@@ -24,10 +23,25 @@ input, button {
 input::placeholder {
   color: #6c757d;
   font-size: 16px;
+  user-select: none;
+}
+
+p, span, a, i, b, strong, h1, h2, h3, h4, h5, h6 {
+  user-select: none;
 }
 
 a {
   color: #cf7d1f !important;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0;
+}
+
+i {
+  font-size: 22px;
 }
 
 .background-pattern {
@@ -57,6 +71,142 @@ a {
   margin-top: 7px;
 }
 
+.navigation-bar {
+  height: 100vh;
+  position: absolute;
+  background-color: #cf7d1f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navigation-bar .menu-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+.navigation-bar .menu-buttons .active {
+  color: #fff9dc !important;
+}
+.navigation-bar .menu-buttons li {
+  width: 35px;
+}
+.navigation-bar .menu-buttons li svg .path {
+  transition: all 0.3s ease;
+  color: #d9d1b6;
+}
+.navigation-bar .menu-buttons li svg:hover .path {
+  color: #fff9dc;
+}
+.navigation-bar .logo {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: auto;
+}
+
+.sidebar {
+  background: #2a2a2a;
+  width: 420px !important;
+  height: 100vh;
+  margin-left: 64px !important;
+}
+.sidebar .sidebar-header {
+  background: #383f44;
+  height: 110px;
+}
+.sidebar .sidebar-header .sidebar-header-button {
+  background: #2a2a2a;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #adb5bd;
+}
+.sidebar .sidebar-header .dropdown {
+  color: #6c757d;
+  user-select: none;
+}
+.sidebar .sidebar-header .dropdown .dropdown-toggle {
+  font-size: 18px;
+}
+.sidebar .sidebar-header .dropdown-menu {
+  background: #2a2a2a;
+}
+.sidebar .sidebar-header .dropdown-menu .dropdown-item {
+  color: #adb5bd !important;
+  user-select: none;
+}
+.sidebar .sidebar-header .dropdown-menu .dropdown-item:hover, .sidebar .sidebar-header .dropdown-menu .dropdown-item:active {
+  background-color: #383f44 !important;
+}
+.sidebar .sidebar-header .form-control {
+  padding-top: 8px;
+  background: #2a2a2a;
+  color: #adb5bd;
+  font-size: 18px;
+}
+.sidebar .sidebar-header .form-control::placeholder {
+  color: #adb5bd;
+  font-size: 18px;
+}
+.sidebar .sidebar-header .form-control:focus {
+  box-shadow: none;
+  border: none;
+}
+.sidebar .sidebar-header .input-group-text {
+  background: #2a2a2a;
+  border: none;
+}
+.sidebar .chat-list .active {
+  background: #c18d1a;
+  border: 1px #c18d1a solid;
+}
+.sidebar .chat-list .active .last-message {
+  color: white !important;
+}
+.sidebar .chat-list li {
+  transition: all 0.3s ease;
+  display: inline-flex;
+  border: 1px #6c757d solid;
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+}
+.sidebar .chat-list li .avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.sidebar .chat-list li .chat-content {
+  margin-left: 14px;
+}
+.sidebar .chat-list li .chat-content .chat-title {
+  display: inline-flex;
+  align-items: center;
+}
+.sidebar .chat-list li .chat-content p {
+  font-size: 14px;
+  max-width: 35ch;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.sidebar .chat-list li .chat-content .last-message {
+  user-select: none;
+  color: #adb5bd;
+  max-width: 35ch;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.sidebar .chat-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.sidebar .chat-list li:hover {
+  border-color: #c18d1a;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 280px) {
   input::placeholder {
     font-size: 13px;
@@ -81,9 +231,32 @@ a {
   .restore-password-h4 {
     font-size: 16px;
   }
+
+  .navigation-bar {
+    position: relative;
+    height: auto;
+    flex-direction: row;
+  }
+  .navigation-bar .menu-buttons {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .sidebar p, .sidebar .last-message {
+    max-width: 20ch !important;
+  }
+  .sidebar .form-control {
+    font-size: 16px !important;
+  }
+  .sidebar .form-control::placeholder {
+    font-size: 16px !important;
+  }
 }
-/* Extra small devices (phones, 600px and down) */
-@media screen and (max-width: 600px) {
+/* Extra small devices (phones, 281px and up) */
+@media screen and (min-width: 281px) {
   .form-input {
     width: 75%;
   }
@@ -98,9 +271,26 @@ a {
     border-radius: 15px;
     font-size: 15px;
   }
+
+  .navigation-bar {
+    position: relative;
+    height: auto;
+    flex-direction: row;
+  }
+  .navigation-bar .menu-buttons {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .sidebar p, .sidebar .last-message {
+    max-width: 30ch !important;
+  }
 }
-/* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+/* Medium devices (landscape tablets, 601px and up) */
+@media screen and (min-width: 601px) {
   .auth-header {
     font-size: 40px !important;
   }
@@ -120,8 +310,53 @@ a {
   .restore-password-button {
     width: 50% !important;
   }
+
+  .navigation-bar {
+    position: relative;
+    height: auto;
+    flex-direction: row;
+  }
+  .navigation-bar .menu-buttons {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebar p, .sidebar .last-message {
+    max-width: 90ch;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 993px) {
+  .navigation-bar {
+    height: 100vh;
+    position: absolute;
+    background-color: #cf7d1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation-bar .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+  }
+  .navigation-bar .menu-buttons li {
+    width: 35px;
+  }
+
+  .sidebar {
+    width: 420px !important;
+    margin-left: 64px !important;
+  }
+  .sidebar p, .sidebar .last-message {
+    max-width: 35ch !important;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
 /*# sourceMappingURL=style.css.map */
