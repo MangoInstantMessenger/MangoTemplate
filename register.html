@@ -1,32 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
-	<title>Mango Messenger</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+          href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <title>Mango Messenger</title>
 </head>
 <body class="background-pattern">
-	<div class="container d-flex justify-content-center align-items-center flex-column vh-100">
-		<h1 class="font-weight-bold mb-4 auth-header user-select-none">Register</h1>
-		<h4 class="mb-4 text-center user-select-none">We are Different, We Make You Different.</h4>
-		<input class="mb-3 form-input p-3" type="text" placeholder="Enter your display name">
-		<input class="mb-3 form-input p-3" type="text" placeholder="Enter your email address">
-		<input class="mb-3 form-input p-3" type="text" placeholder="Enter password">
-		<p class="justify-content-end user-select-none">*8 chars, numbers, lower, upper, symbol</p>
-		<div class="d-inline-flex flex-row">
-			<input type="checkbox" class="terms-of-service">
-			<p class="text-nowrap user-select-none">I accept terms of service</p>
-		</div>
-		<button class="form-button p-3 font-weight-bold mb-3">REGISTER</button>
-		<span class="user-select-none form-label">
+<div class="container d-flex justify-content-center align-items-center flex-column vh-100">
+    <h1 class="font-weight-bold mb-4 auth-header user-select-none">Register</h1>
+    <h4 class="mb-4 text-center user-select-none">We are Different, We Make You Different.</h4>
+
+    <label for="displayName"></label>
+    <input class="mb-3 form-input p-3"
+           type="text"
+           id="displayName"
+           name="displayName"
+           placeholder="Enter your display name">
+
+    <label for="emailAddress"></label>
+    <input class="mb-3 form-input p-3"
+           id="emailAddress"
+           name="emailAddress"
+           type="text"
+           placeholder="Enter your email address">
+
+    <label for="password"></label>
+    <input class="mb-3 form-input p-3"
+           id="password"
+           name="password"
+           type="text"
+           placeholder="Enter password">
+
+    <p class="justify-content-end user-select-none">*8 chars, numbers, lower, upper, symbol</p>
+
+    <div class="d-inline-flex flex-row">
+        <label for="termsAccepted"></label>
+        <input type="checkbox"
+               id="termsAccepted"
+               name="termsAccepted"
+               class="terms-of-service">
+        <p class="text-nowrap user-select-none">I accept terms of service</p>
+    </div>
+
+    <button class="form-button p-3 font-weight-bold mb-3">REGISTER</button>
+
+    <span class="user-select-none form-label">
 			Already have an account? <a href="https://front.mangomessenger.company/login" class="form-label">Login</a>.
 		</span>
-		<span class="user-select-none form-label">
+
+    <span class="user-select-none form-label">
 			Forgot password? <a href="https://front.mangomessenger.company/restore-password-request" class="form-label">Restore</a>.
 		</span>
-	</div>
+</div>
 </body>
 </html>
