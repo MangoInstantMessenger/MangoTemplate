@@ -1,6 +1,6 @@
 $dark: #2a2a2a;
 $gray: #6c757d;
-$gray-light: #adb5bd;
+$light-gray: #adb5bd;
 $dark-gray: #383f44;
 $orange: #cf7d1f;
 $orange-dark: #c18d1a;
@@ -49,6 +49,12 @@ i {
   background-repeat: repeat;
   background-color: #383F44;
 }
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
 .form-input {
   width: 50%;
   background-color: $dark;
@@ -66,6 +72,12 @@ i {
 
 .terms-of-service {
   margin-top: 7px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 .navigation-bar {
@@ -113,6 +125,30 @@ i {
   }
 }
 
+.button-dark {
+  background: $dark;
+  border-radius: 5px;
+  font-size: 16px;
+  color: $light-gray;
+}
+
+.dropdown {
+  color: $gray;
+  user-select: none;
+  .dropdown-toggle {
+    font-size: 18px;
+  }
+  .dropdown-menu{
+    background: $dark;
+    .dropdown-item {
+      color: $light-gray !important;
+      user-select: none;
+      &:hover, &:active {
+        background-color: #383f44 !important;
+      }
+    }
+  }
+}
 
 .sidebar {
   background: $dark;
@@ -122,36 +158,14 @@ i {
   .sidebar-header {
     background: $dark-gray;
     height: 110px;
-    .sidebar-header-button {
-      background: $dark;
-      border-radius: 5px;
-      font-size: 16px;
-      color: $gray-light;
-    }
-    .dropdown {
-      color: $gray;
-      user-select: none;
-      .dropdown-toggle {
-        font-size: 18px;
-      }
-    }
-    .dropdown-menu{
-      background: $dark;
-      .dropdown-item {
-        color: $gray-light !important;
-        user-select: none;
-        &:hover, &:active {
-          background-color: #383f44 !important;
-        }
-      }
-    }
+
     .form-control {
       padding-top: 8px;
       background: $dark;
-      color: $gray-light;
+      color: $light-gray;
       font-size: 18px;
       &::placeholder {
-        color: $gray-light;
+        color: $light-gray;
         font-size: 18px;
       }
       &:focus {
@@ -180,12 +194,6 @@ i {
       width: 100%;
       padding: 16px;
       border-radius: 10px;
-      
-      .avatar {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-      }
 
       .chat-content {
         margin-left: 14px;
@@ -202,7 +210,7 @@ i {
         }
         .last-message {
           user-select: none;
-          color: $gray-light;
+          color: $light-gray;
           max-width: 35ch;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -220,153 +228,192 @@ i {
   }
 }
 
+.chat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-// Galaxy Fold
-@media screen and (max-width: 280px) {
-  input::placeholder {
-    font-size: 13px;
-  }
-  .form-button {
-    width: 40% !important;
-  }
-  .form-label {
-    font-size: 16px;
-  }
-  .restore-password-button {
-    width: 50% !important;
-  }
-  .restore-password-h1 {
-    font-size: 30px;
-  }
-  .restore-password-h4 {
-    font-size: 16px;
-  }
+  .chat-header {
+    padding: 22px;
+    background-color: $dark;
+    display: flex;
+    align-items: center;
+    .chat-info {
+      display: flex;
+      justify-content: space-between !important;
+      align-items: center;
+      width: 100%;
+      .chat-description {
+        display: flex;
+        flex-direction: column;
 
-  .navigation-bar {
-    position: relative;
-    height: auto;
-    flex-direction: row;
+        .chat-name {
+          font-size: 16px;
+          width: 100px;
+          color: white;
+        }
 
-    .menu-buttons {
-      flex-direction: row;
-    }
-  }
-
-  .sidebar {
-    margin-left: 0 !important;
-    width: 100% !important;
-    p, .last-message {
-      max-width: 20ch !important; 
-    }
-    .form-control {
-      font-size: 16px !important;
-      &::placeholder {
-        font-size: 16px !important;
+        span {
+          color: $light-gray;
+        }
+      }
+      .chat-actions {
+        display: flex;
       }
     }
+
+
   }
 }
+//dsgsdag sagsadgsdgasgsadfasdf
 
-/* Extra small devices (phones, 281px and up) */
-@media screen and (min-width: 281px) {
-  .form-input {
-    width: 75%;
-  }
-  .terms-of-service {
-    margin-top: 5px;
-  }
-  .form-button {
-    width: 75%;
-    background-color: #cf7d1f;
-    border-radius: 15px;
-    font-size: 15px;
-  }
 
-  .navigation-bar {
-    position: relative;
-    height: auto;
-    flex-direction: row;
-
-    .menu-buttons {
-      flex-direction: row;
-    }
-  }
-
-  .sidebar {
-    margin-left: 0 !important;
-    width: 100% !important;
-    p, .last-message {
-      max-width: 30ch !important; 
-    }
-  }
-}
-
-/* Medium devices (landscape tablets, 601px and up) */
-@media screen and (min-width: 601px) {
-  .auth-header {
-    font-size: 40px !important;
-  }
-  .form-input {
-    font-size: 20px;
-  }
-  input::placeholder {
-    font-size: 20px;
-  }
-  p{
-    font-size: 18px;
-  }
-  .restore-password-button {
-    width: 50% !important;
-  }
-
-  .navigation-bar {
-    position: relative;
-    height: auto;
-    flex-direction: row;
-
-    .menu-buttons {
-      flex-direction: row;
-    }
-  }
-  .sidebar {
-    margin-left: 0;
-    width: 100%;
-    p, .last-message {
-      max-width: 90ch; 
-    }
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 993px) {
-  .navigation-bar {
-    height: 100vh;
-    position: absolute;
-    background-color: $orange;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-     .menu-buttons {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-evenly;
-     flex-grow: 1;
-     li{
-       width: 35px;
-     }
-    }
-  }
-  
-  .sidebar {
-    width: 420px !important;
-    margin-left: 64px !important;
-    p, .last-message {
-      max-width: 35ch !important; 
-    }
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-}
+//// Galaxy Fold
+//@media screen and (max-width: 280px) {
+//  input::placeholder {
+//    font-size: 13px;
+//  }
+//  .form-button {
+//    width: 40% !important;
+//  }
+//  .form-label {
+//    font-size: 16px;
+//  }
+//  .restore-password-button {
+//    width: 50% !important;
+//  }
+//  .restore-password-h1 {
+//    font-size: 30px;
+//  }
+//  .restore-password-h4 {
+//    font-size: 16px;
+//  }
+//
+//  .navigation-bar {
+//    position: relative;
+//    height: auto;
+//    flex-direction: row;
+//
+//    .menu-buttons {
+//      flex-direction: row;
+//    }
+//  }
+//
+//  .sidebar {
+//    margin-left: 0 !important;
+//    width: 100% !important;
+//    p, .last-message {
+//      max-width: 20ch !important;
+//    }
+//    .form-control {
+//      font-size: 16px !important;
+//      &::placeholder {
+//        font-size: 16px !important;
+//      }
+//    }
+//  }
+//}
+//
+///* Extra small devices (phones, 281px and up) */
+//@media screen and (min-width: 281px) {
+//  .form-input {
+//    width: 75%;
+//  }
+//  .terms-of-service {
+//    margin-top: 5px;
+//  }
+//  .form-button {
+//    width: 75%;
+//    background-color: #cf7d1f;
+//    border-radius: 15px;
+//    font-size: 15px;
+//  }
+//
+//  .navigation-bar {
+//    position: relative;
+//    height: auto;
+//    flex-direction: row;
+//
+//    .menu-buttons {
+//      flex-direction: row;
+//    }
+//  }
+//
+//  .sidebar {
+//    margin-left: 0 !important;
+//    width: 100% !important;
+//    p, .last-message {
+//      max-width: 30ch !important;
+//    }
+//  }
+//}
+//
+///* Medium devices (landscape tablets, 601px and up) */
+//@media screen and (min-width: 601px) {
+//  .auth-header {
+//    font-size: 40px !important;
+//  }
+//  .form-input {
+//    font-size: 20px;
+//  }
+//  input::placeholder {
+//    font-size: 20px;
+//  }
+//  p{
+//    font-size: 18px;
+//  }
+//  .restore-password-button {
+//    width: 50% !important;
+//  }
+//
+//  .navigation-bar {
+//    position: relative;
+//    height: auto;
+//    flex-direction: row;
+//
+//    .menu-buttons {
+//      flex-direction: row;
+//    }
+//  }
+//  .sidebar {
+//    margin-left: 0;
+//    width: 100%;
+//    p, .last-message {
+//      max-width: 90ch;
+//    }
+//  }
+//}
+//
+///* Large devices (laptops/desktops, 992px and up) */
+//@media screen and (min-width: 993px) {
+//  .navigation-bar {
+//    height: 100vh;
+//    position: absolute;
+//    background-color: $orange;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//     .menu-buttons {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     flex-grow: 1;
+//     li{
+//       width: 35px;
+//     }
+//    }
+//  }
+//
+//  .sidebar {
+//    width: 420px !important;
+//    margin-left: 64px !important;
+//    p, .last-message {
+//      max-width: 35ch !important;
+//    }
+//  }
+//}
+//
+///* Extra large devices (large laptops and desktops, 1200px and up) */
+//@media screen and (min-width: 1200px) {
+//}

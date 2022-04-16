@@ -9,8 +9,8 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Mango Messenger</title>
 </head>
-<body>
-<div id="menu">
+<body class="d-flex">
+<div id="menu" class="menu">
     <nav class="navigation-bar p-2">
         <div class="logo p-1">
             <img src="./img/logo.png" alt="Mango Logo" width="40" height="40">
@@ -48,13 +48,13 @@
         <header class="sidebar-header p-3">
             <div class="d-flex justify-content-between align-items-center">
                 <h5>Chats</h5>
-                <button class="sidebar-header-button p-2">
+                <button class="button-dark p-2">
                     Create Group
                 </button>
             </div>
             <div class="d-flex justify-content-between mt-2">
                 <div class="dropdown">
-                    <button class="dropdown-toggle p-2 sidebar-header-button" data-toggle="dropdown" href="#">All
+                    <button class="dropdown-toggle p-2 button-dark" data-toggle="dropdown" href="#">All
                         chats
                     </button>
                     <div class="dropdown-menu mt-0" role="menu" aria-labelledby="dLabel">
@@ -72,10 +72,7 @@
                                aria-describedby="basic-addon1">
                         <div class="input-group-prepend">
                             <button class="input-group-text" id="basic-addon1">
-                                <svg width="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                </svg>
+                                <img src="./svg/search-icon.svg" alt=" Search Icon" />
                             </button>
                         </div>
                     </div>
@@ -129,8 +126,55 @@
     </aside>
 </div>
 
-<main id="main">
+<main id="chat" class="chat background-pattern">
+    <div class="chat-header">
+        <img src="./img/chat-avatar.png" alt="Chat Avatar" class="avatar" />
+        <div class="chat-info ml-2">
+            <div class="chat-description">
+                <span class="chat-name">fasfsdaf</span>
+                <span>fsadsaf</span>
+                <span>2 members</span>
+            </div>
+            <div class="chat-actions">
+                <button class="button-dark">
+                    <img src="./svg/search-icon.svg" alt="Search Icon" />
+                </button>
+                <div class="dropdown">
+                    <button class="button-dark" role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./svg/dots-vertical.svg" alt="Vertical Dots" />
+                    </button>
 
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
+                            <svg class="icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                            </svg>
+
+                            <span>Archive Chat</span>
+                        </div>
+                        <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
+                            <svg class="icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+
+                            <span class="text-danger">Leave Chat</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="messages">
+
+    </div>
+
+    <div class="chat-footer">
+
+    </div>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
