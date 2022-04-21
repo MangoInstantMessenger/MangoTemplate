@@ -1,9 +1,10 @@
-$dark: #2a2a2a;
+$dark: #383838;
 $gray: #6c757d;
 $light-gray: #adb5bd;
-$dark-gray: #383f44;
+$dark-gray: #505558;
 $orange: #cf7d1f;
 $orange-dark: #c18d1a;
+$red: #ff3333;
 
 * {
 	box-sizing: border-box;
@@ -12,7 +13,7 @@ $orange-dark: #c18d1a;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 body {
-  margin: 0px;
+  margin: 0;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -47,12 +48,16 @@ i {
 .background-pattern {
   background-image: url(./../svg/background-pattern.svg);
   background-repeat: repeat;
-  background-color: #383F44;
+  background-color: #232526;
 }
 
 .icon {
   width: 20px;
   height: 20px;
+}
+
+.text-red {
+  color: $red;
 }
 
 .form-input {
@@ -152,12 +157,13 @@ i {
 
 .sidebar {
   background: $dark;
-  width: 420px !important ;
+  width: 380px !important;
   height: 100vh;
   margin-left: 64px !important;
   .sidebar-header {
     background: $dark-gray;
     height: 110px;
+    border-right: 1px $gray solid;
 
     .form-control {
       padding-top: 8px;
@@ -198,12 +204,19 @@ i {
       .chat-content {
         margin-left: 14px;
         .chat-title{
-          display: inline-flex;
+          display: flex;
           align-items: center;
+          width: 100%;
+          .chat-info {
+            display: flex;
+            justify-content: space-between !important;
+            align-items: center;
+            width: 100%;
+          }
         }
         p {
           font-size: 14px;
-          max-width: 35ch;
+          max-width: 25ch;
           margin: 0;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -214,6 +227,7 @@ i {
           max-width: 35ch;
           text-overflow: ellipsis;
           overflow: hidden;
+          white-space: nowrap;
         }
       }
 
@@ -232,6 +246,8 @@ i {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x:hidden;
+  overflow-y:auto;
 
   .chat-header {
     padding: 22px;
@@ -246,13 +262,11 @@ i {
       .chat-description {
         display: flex;
         flex-direction: column;
-
         .chat-name {
           font-size: 16px;
           width: 100px;
           color: white;
         }
-
         span {
           color: $light-gray;
         }
@@ -261,11 +275,83 @@ i {
         display: flex;
       }
     }
+  }
+  .chat-messages {
+    flex: 2;
+    padding: 12px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    ul {
+      overflow-x:hidden;
+      overflow-y:auto;
+    }
+    .message {
+      margin-bottom: 10px;
+      max-height: 155px;
+      display: flex;
+      max-width: 500px;
+      .message-wrapper {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        .message-content {
+          max-width: 500px;
+          overflow-wrap: break-word;
+          display: inline-block;
+          padding: 16px;
+          background-color: #545454;
+          text-align: left;
+          border-radius: 15px 15px 15px;
+        }
+        .message-options {
+          margin-top: 3px;
+          display: flex;
+          .message-time {
+            font-size: 14px;
+            color: $light-gray;
+          }
+          .message-button {
+            margin: 0 10px;
+            cursor: pointer;
+            width: 18px;
+          }
+          button {
+            background: none;
+          }
+        }
 
+      }
 
+      .user-avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        align-self: center;
+      }
+    }
+    .active {
+      float: right;
+      flex-direction: row-reverse;
+      .message-options {
+        flex-direction: row-reverse;
+      }
+
+      .message-wrapper {
+        margin-left: 0;
+        margin-right: 10px;
+        .message-content {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+  .chat-footer {
+    padding: 36px;
+    background-color: $dark;
+    border-left: 1px $gray solid;
+    position: static;
   }
 }
-//dsgsdag sagsadgsdgasgsadfasdf
 
 
 //// Galaxy Fold
