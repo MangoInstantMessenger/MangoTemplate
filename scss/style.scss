@@ -288,11 +288,12 @@ i {
 }
 
 .chat {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100vh;
   overflow-x: hidden;
-  min-width: 0;
   .chat-header {
     padding: 22px;
     background-color: $dark;
@@ -321,7 +322,7 @@ i {
     }
   }
   .chat-messages {
-    max-height: 65%;
+    height: 79vh;
     padding: 12px;
     display: flex;
     flex-direction: column;
