@@ -12,6 +12,9 @@ $red: #ff3333;
   font-size: 14px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+html {
+  overflow: hidden;
+}
 body {
   margin: 0;
   font-size: 1rem;
@@ -19,13 +22,13 @@ body {
   line-height: 1.5;
   text-align: left;
 }
-input, button {
+input, textarea, button {
   border: none;
   font-size: 16px;
   border: none !important;
   outline: none !important;
 }
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: $gray;
   font-size: 16px;
   user-select: none;
@@ -40,6 +43,9 @@ ul {
   list-style-type: none;
   margin: 0 !important;
   padding: 0;
+  li {
+    margin: 0;
+  }
 }
 i {
   font-size: 22px;
@@ -58,6 +64,9 @@ i {
 
 .text-red {
   color: $red;
+}
+.cursor-pointer {
+  cursor: pointer !important;
 }
 
 .form-input {
@@ -184,10 +193,13 @@ i {
       border: none;
     }
   }
-  .chat-list {
+  .list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
     .active {
       background: $orange-dark;
-      .last-message {
+      .message {
         color: white !important;
       }
       border: 1px $orange-dark solid;
@@ -201,13 +213,13 @@ i {
       padding: 16px;
       border-radius: 10px;
 
-      .chat-content {
+      .content {
         margin-left: 14px;
-        .chat-title{
+        .title{
           display: flex;
           align-items: center;
           width: 100%;
-          .chat-info {
+          .info {
             display: flex;
             justify-content: space-between !important;
             align-items: center;
@@ -221,7 +233,7 @@ i {
           text-overflow: ellipsis;
           overflow: hidden;
         }
-        .last-message {
+        .message {
           user-select: none;
           color: $light-gray;
           max-width: 35ch;
@@ -246,9 +258,8 @@ i {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x:hidden;
-  overflow-y:auto;
-
+  overflow-x: hidden;
+  min-width: 0;
   .chat-header {
     padding: 22px;
     background-color: $dark;
@@ -277,79 +288,109 @@ i {
     }
   }
   .chat-messages {
-    flex: 2;
+    max-height: 65%;
     padding: 12px;
-    overflow-x:hidden;
-    overflow-y:auto;
-    ul {
-      overflow-x:hidden;
-      overflow-y:auto;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
     }
     .message {
       margin-bottom: 10px;
       max-height: 155px;
-      display: flex;
       max-width: 500px;
-      .message-wrapper {
-        margin-left: 10px;
+      display: inline;
+      .message-layout {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         .message-content {
           max-width: 500px;
           overflow-wrap: break-word;
-          display: inline-block;
-          padding: 16px;
-          background-color: #545454;
-          text-align: left;
-          border-radius: 15px 15px 15px;
+          background-color: $gray;
+          padding: 12px;
+          margin-left: 10px;
+          border-radius: 15px 15px 15px 0;
         }
         .message-options {
-          margin-top: 3px;
           display: flex;
-          .message-time {
-            font-size: 14px;
-            color: $light-gray;
-          }
+          margin-left: 10px;
           .message-button {
-            margin: 0 10px;
-            cursor: pointer;
-            width: 18px;
-          }
-          button {
             background: none;
+            padding: 0;
+            cursor: pointer;
+          }
+          .message-time {
+            margin: 0;
           }
         }
-
-      }
-
-      .user-avatar {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        align-self: center;
+        .user-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          align-self: flex-end;
+        }
       }
     }
-    .active {
-      float: right;
-      flex-direction: row-reverse;
-      .message-options {
+    .self {
+      align-self: flex-end;
+      .message-layout {
         flex-direction: row-reverse;
-      }
-
-      .message-wrapper {
-        margin-left: 0;
-        margin-right: 10px;
         .message-content {
+          margin-left: 0;
+          margin-right: 10px;
           background-color: $orange;
+          border-radius: 15px 15px 0 15px;
+        }
+        .message-options {
+          flex-direction: row-reverse;
+          margin-left: 0;
+          margin-right: 10px;
         }
       }
     }
   }
   .chat-footer {
-    padding: 36px;
+    padding: 22px;
     background-color: $dark;
     border-left: 1px $gray solid;
     position: static;
+    display: flex;
+    align-items: center;
+    .button-dark {
+      padding-bottom: 9px;
+    }
+    .message-input {
+      &::placeholder {
+        font-size: 18px;
+      }
+
+      font-size: 18px;
+      resize: none;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      color: white;
+      background-color: $dark;
+      height: 35px;
+    }
+    .send-message {
+      background-color: $orange;
+      width: 50px;
+      height: 45px;
+      border-radius: 50%;
+      margin-left: 10px;
+      transition: all .3s ease;
+      &:hover {
+        background-color: #b16b1b;
+      }
+    }
   }
 }
 

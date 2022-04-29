@@ -2,43 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="./css/style.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
     <title>Mango Messenger</title>
 </head>
 <body class="d-flex">
-<div id="menu" class="menu">
+<div class="menu" id="menu">
     <nav class="navigation-bar p-2">
         <div class="logo p-1">
-            <img src="./img/logo.png" alt="Mango Logo" width="40" height="40">
+            <img alt="Mango Logo" height="40" src="./img/logo.png" width="40">
         </div>
         <ul class="text-center menu-buttons">
             <li>
                 <a href="#">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path class="path active" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 				14h4a2 2 0 002-2V6a2 2 0 	00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="path active"
+                              d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 				14h4a2 2 0 002-2V6a2 2 0 	00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"/>
                     </svg>
                 </a>
             </li>
 
             <li>
                 <a href="#">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path class="path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 				4 0 11-8 0 4 4 0 018 0z"/>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="path"
+                              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 				4 0 11-8 0 4 4 0 018 0z"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"/>
                     </svg>
                 </a>
             </li>
 
             <li>
                 <a href="#">
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path class="path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 				3 3 0 016 0zm6 2a9 9 0 	11-18 0 9 9 0 0118 0z"/>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path class="path"
+                              d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 				3 3 0 016 0zm6 2a9 9 0 	11-18 0 9 9 0 0118 0z"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"/>
                     </svg>
                 </a>
             </li>
@@ -57,7 +63,7 @@
                     <button class="dropdown-toggle p-2 button-dark" data-toggle="dropdown" href="#">All
                         chats
                     </button>
-                    <div class="dropdown-menu mt-0" role="menu" aria-labelledby="dLabel">
+                    <div aria-labelledby="dLabel" class="dropdown-menu mt-0" role="menu">
                         <div class="dropdown-item">All chats</div>
                         <div class="dropdown-item">Groups</div>
                         <div class="dropdown-item">Direct chats</div>
@@ -67,602 +73,357 @@
                 <div class="d-inline">
                     <div class="input-group mb-3 ">
                         <label for="searchBar"></label>
-                        <input type="text" class="form-control ml-3" id="searchBar" name="searchBar"
+                        <input aria-describedby="basic-addon1" class="form-control ml-3" id="searchBar" name="searchBar"
                                placeholder="Search chats..."
-                               aria-describedby="basic-addon1">
+                               type="text">
                         <div class="input-group-prepend">
                             <button class="input-group-text" id="basic-addon1">
-                                <img src="./svg/search-icon.svg" alt=" Search Icon" />
+                                <img alt=" Search Icon" src="./svg/search-icon.svg"/>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <ul class="chat-list py-3 px-2">
+        <ul class="list py-3 px-2">
             <li class="active">
-                <img class="avatar" src="./img/chat-avatar.png" alt="Chat avatar">
-                <div class="chat-content">
-                    <div class="chat-title">
-                        <img class="mr-2" src="./svg/group.svg" alt="Group Icon" width="16" height="16">
-                        <div class="chat-info">
+                <img alt="Chat avatar" class="avatar" src="./img/chat-avatar.png">
+                <div class="content">
+                    <div class="title">
+                        <img alt="Group Icon" class="mr-2" height="16" src="./svg/group.svg" width="16">
+                        <div class="info">
                             <p>
                                 chatnamehmfdgnkjdfghjdkgjjdfgjksdhgjkdhgk;ldfshgjldhsgjkldsfhjghldflkgjdfslghdfjklghfdjsklghfdjsklghjksldf
                             </p>
                             <div>12:35</div>
                         </div>
                     </div>
-                    <div class="last-message">
+                    <div class="message">
                         <b>Nickname: </b>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
                     </div>
                 </div>
             </li>
             <li>
-                <img class="avatar" src="./img/chat-avatar.png" alt="Chat avatar">
-                <div class="chat-content">
-                    <div class="chat-title">
-                        <img class="mr-2" src="./svg/group.svg" alt="Group Icon" width="16" height="16">
-                        <div class="chat-info">
+                <img alt="Chat avatar" class="avatar" src="./img/chat-avatar.png">
+                <div class="content">
+                    <div class="title">
+                        <img alt="Group Icon" class="mr-2" height="16" src="./svg/group.svg" width="16">
+                        <div class="info">
                             <p>
                                 chatnamehmfdgnkjdfghjdkgjjdfgjksdhgjkdhgk;ldfshgjldhsgjkldsfhjghldflkgjdfslghdfjklghfdjsklghfdjsklghjksldf
                             </p>
                             <div>12:35</div>
                         </div>
                     </div>
-                    <div class="last-message">
+                    <div class="message">
                         <b>Nickname: </b>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
                     </div>
                 </div>
             </li>
-            <li>
-                <img class="avatar" src="./img/chat-avatar.png" alt="Chat avatar">
-                <div class="chat-content">
-                    <div class="chat-title">
-                        <img class="mr-2" src="./svg/group.svg" alt="Group Icon" width="16" height="16">
-                        <div class="chat-info">
-                            <p>
-                                chatnamehmfdgnkjdfghjdkgjjdfgjksdhgjkdhgk;ldfshgjldhsgjkldsfhjghldflkgjdfslghdfjklghfdjsklghfdjsklghjksldf
-                            </p>
-                            <div>12:35</div>
-                        </div>
-                    </div>
-                    <div class="last-message">
-                        <b>Nickname: </b>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
-                    </div>
-                </div>
-            </li>
+
         </ul>
     </aside>
 </div>
 
-<main id="chat" class="chat">
-    <div class="chat-header">
-        <img src="./img/chat-avatar.png" alt="Chat Avatar" class="avatar" />
-        <div class="chat-info ml-2">
-            <div class="chat-description">
-                <span class="chat-name">fasfsdaf</span>
-                <span>fsadsaf</span>
-                <span>2 members</span>
-            </div>
-            <div class="chat-actions">
-                <button class="button-dark">
-                    <img src="./svg/search-icon.svg" alt="Search Icon" />
-                </button>
-                <div class="dropdown">
-                    <button class="button-dark" role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./svg/dots-vertical.svg" alt="Vertical Dots" />
+<main class="chat" id="chat">
+    <div class="chat-layout">
+        <div class="chat-header">
+            <img alt="Chat Avatar" class="avatar" src="./img/chat-avatar.png"/>
+            <div class="chat-info ml-2">
+                <div class="chat-description">
+                    <span class="chat-name">fasfsdaf</span>
+                    <span>fsadsaf</span>
+                    <span>2 members</span>
+                </div>
+                <div class="chat-actions">
+                    <button class="button-dark">
+                        <img alt="Search Icon" src="./svg/search-icon.svg"/>
                     </button>
+                    <div class="dropdown">
+                        <button aria-expanded="false" aria-haspopup="true" class="button-dark" data-toggle="dropdown"
+                                role="button" title="Details">
+                            <img alt="Vertical Dots" src="./svg/dots-vertical.svg"/>
+                        </button>
 
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                            <img class="mr-1" src="./svg/archive.svg" alt="Archive Icon">
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-item" data-target="#startConversation" data-toggle="modal"
+                                 role="button">
+                                <img alt="Archive Icon" class="mr-1" src="./svg/archive.svg">
 
-                            <span>Archive Chat</span>
-                        </div>
-                        <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                            <img class="mr-1" src="./svg/trash.svg" alt="Leave Chat Icon">
+                                <span>Archive Chat</span>
+                            </div>
+                            <div class="dropdown-item" data-target="#createGroup" data-toggle="modal" role="button">
+                                <img alt="Leave Chat Icon" class="mr-1" src="./svg/trash.svg">
 
-                            <span class="text-red">Leave Chat</span>
+                                <span class="text-red">Leave Chat</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="chat-messages background-pattern ">
-        <ul>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        fdgsdsfgfsgsdfgfdsg
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
+        <div class="chat-messages background-pattern ">
+            <ul>
+                <li class="message">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time mr-2">12:56</p>
+                                <div class="message-button">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        fdgsdsfgfsgsdfgfdsg
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        fdgsdsfgfsgsdfgfdsg
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        fdgsdsfgfsgsdfgfdsg
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        fdgsdsfgfsgsdfgfdsg
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        fdgsdsfgfsgsdfgfdsg
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="message active">
-                <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar" />
-                <div class="message-wrapper">
-                    <div class="message-content">
-                        testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
-                    </div>
-                    <div class="message-options">
-                        <p class="message-time">12:56</p>
-                        <div class="message-button">
-                            <img src="./svg/reply.svg" alt="Reply Icon">
-                        </div>
-                        <div class="dropdown">
-                            <button role="button" title="Details" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots" />
-                            </button>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#startConversation">
-                                    <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
-                                    <span>Edit</span>
-                                </div>
-                                <div class="dropdown-item" role="button" data-toggle="modal" data-target="#createGroup">
-                                    <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
-                                    <span class="text-red">Delete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
 
+                    </div>
+                </li>
+                <li class="message self">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                fdgsdsfgfsgsdfgfdsg
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time">12:56</p>
+                                <button class="message-button mr-2">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </button>
+                                <div class="dropdown">
+                                    <button class="message-button mr-2" role="button" title="Details"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots"/>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#startConversation">
+                                            <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
+                                            <span>Edit</span>
+                                        </div>
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#createGroup">
+                                            <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
+                                            <span class="text-red">Delete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    </div>
+                    </div>
+                </li>
+                <li class="message">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time mr-2">12:56</p>
+                                <div class="message-button">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="chat-footer">
+                    </div>
+                </li>
+                <li class="message self">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                fdgsdsfgfsgsdfgfdsg
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time">12:56</p>
+                                <button class="message-button mr-2">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </button>
+                                <div class="dropdown">
+                                    <button class="message-button mr-2" role="button" title="Details"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots"/>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#startConversation">
+                                            <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
+                                            <span>Edit</span>
+                                        </div>
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#createGroup">
+                                            <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
+                                            <span class="text-red">Delete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                </li>
+                <li class="message">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time mr-2">12:56</p>
+                                <div class="message-button">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="message self">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                fdgsdsfgfsgsdfgfdsg
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time">12:56</p>
+                                <button class="message-button mr-2">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </button>
+                                <div class="dropdown">
+                                    <button class="message-button mr-2" role="button" title="Details"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots"/>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#startConversation">
+                                            <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
+                                            <span>Edit</span>
+                                        </div>
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#createGroup">
+                                            <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
+                                            <span class="text-red">Delete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="message">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time mr-2">12:56</p>
+                                <div class="message-button">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="message self">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                fdgsdsfgfsgsdfgfdsg
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time">12:56</p>
+                                <button class="message-button mr-2">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </button>
+                                <div class="dropdown">
+                                    <button class="message-button mr-2" role="button" title="Details"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="./svg/dots-horizontal.svg" alt="Horizontal Dots"/>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#startConversation">
+                                            <img class="mr-1" src="./svg/edit.svg" alt="Edit Icon">
+                                            <span>Edit</span>
+                                        </div>
+                                        <div class="dropdown-item" role="button" data-toggle="modal"
+                                             data-target="#createGroup">
+                                            <img class="mr-1" src="./svg/trash.svg" alt="Delete Message Icon">
+                                            <span class="text-red">Delete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="message">
+                    <div class="message-layout">
+                        <img class="user-avatar" src="./img/razumovsky_picture.jpg" alt="User Avatar"/>
+                        <div class="message-wrapper">
+                            <div class="message-content">
+                                testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttаааааа
+                            </div>
+                            <div class="message-options">
+                                <p class="message-time mr-2">12:56</p>
+                                <div class="message-button">
+                                    <img src="./svg/reply.svg" alt="Reply Icon">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="chat-footer">
+            <div class="dropdown">
+                <button class="button-dark align-text-top" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./svg/attach.svg" alt="Attach icon">
+                </button>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">
+                        <input type="file" id="attachment">
+                    </div>
+                </div>
+            </div>
+            <button class="button-dark mr-2">
+                <img src="./svg/emoji.svg" alt="Emoji Icon">
+            </button>
+            <textarea class="message-input" placeholder="Write message..."></textarea>
+            <button class="send-message">
+                <img src="./svg/arrow-right.svg" alt="Arrow Right Icon">
+            </button>
+        </div>
     </div>
 </main>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
