@@ -22,6 +22,7 @@ body {
   line-height: 1.5;
   text-align: left;
 }
+
 input, textarea, button {
   border: none;
   font-size: 16px;
@@ -64,6 +65,9 @@ i {
 
 .text-red {
   color: $red !important;
+}
+.text-light-gray {
+  color: $light-gray;
 }
 .cursor-pointer {
   cursor: pointer !important;
@@ -123,6 +127,16 @@ i {
   }
 }
 
+.overflow {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  min-height: 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .dropdown {
   color: $gray;
   user-select: none;
@@ -141,11 +155,80 @@ i {
   }
 }
 
-.button-dark {
-  background: $dark;
+.button-dark, .button-orange {
   border-radius: 5px;
   font-size: 16px;
+  transition: all .3s ease;
+
+}
+
+.button-orange {
+  background-color: $orange;
+  color: white;
+  &:hover {
+    background-color: #b56f1e;
+  }
+}
+
+.button-dark {
+  background: $dark;
   color: $light-gray;
+  &:hover {
+    background-color: #313136;
+  }
+}
+
+.main-info {
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+  }
+  p {
+    font-size: 16px;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+  background-color: $dark-gray;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.sidebar-body {
+  .user-info  {
+    li {
+      padding: 9px 20px;
+    }
+  }
+}
+
+.user-info {
+
+  margin-bottom: 25px !important;
+  li {
+    border: $dark 1px solid;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: $dark-gray;
+    padding: 12px 20px;
+    justify-content: space-between;
+    .info {
+      .title {
+        color: $light-gray;
+        font-size: 12px;
+      }
+      p {
+        margin: 0;
+      }
+
+    }
+  }
+
 }
 
 .navigation-bar {
@@ -198,10 +281,10 @@ i {
   width: 380px !important;
   height: 100vh;
   margin-left: 64px !important;
+  border-right: 1px $gray solid;
   .sidebar-header {
     background: $dark-gray;
     height: 110px;
-    border-right: 1px $gray solid;
 
     .form-control {
       padding-top: 8px;
@@ -223,12 +306,7 @@ i {
     }
   }
   .list {
-    overflow-x: hidden;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+
     height: 100%;
     .active {
       background: $orange;
@@ -293,7 +371,6 @@ i {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  overflow-x: hidden;
   .chat-header {
     padding: 22px;
     background-color: $dark;
@@ -326,12 +403,6 @@ i {
     padding: 12px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
     .message {
       margin-bottom: 10px;
       max-height: 155px;
@@ -389,7 +460,6 @@ i {
   .chat-footer {
     padding: 22px;
     background-color: $dark;
-    border-left: 1px $gray solid;
     position: static;
     display: flex;
     align-items: center;
@@ -404,12 +474,7 @@ i {
       font-size: 18px;
       resize: none;
       width: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
-      -ms-overflow-style: none;
-      &::-webkit-scrollbar {
-        display: none;
-      }
+
       color: white;
       background-color: $dark;
       height: 35px;
@@ -433,52 +498,58 @@ i {
   height: 100vh;
   background-color: #232526;
   padding: 24px;
-  .main-info {
-    .avatar {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 25px;
-    }
-    p {
-      font-size: 16px;
-    }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    background-color: $dark-gray;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .profile-header {
     width: 100%;
-    text-align: center;
-    margin-bottom: 25px;
-    .contact-button {
-      transition: all .3s ease;
-      &:hover {
-        background-color: #495057;
-        border-color: #495057;
-      }
-    }
+    padding: 13px;
+    background-color: $dark-gray;
+    border-bottom: 1px $gray solid;
   }
-  .user-info {
-    margin-bottom: 25px !important;
-    li {
-      border: $dark 1px solid;
-      display: flex;
-      background-color: $dark-gray;
-      padding: 12px 20px;
-      justify-content: space-between;
-      .info {
-        .title {
-          color: $light-gray;
-          font-size: 12px;
-        }
-        p {
-          margin: 0;
-        }
+  .profile-settings {
+    max-height: 57%;
+    background-color: $dark;
+    padding: 24px;
 
+    .profile-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 20px;
+      .profile-form-header, .profile-form-footer {
+        background-color: $dark-gray;
+        padding: 12px;
+      }
+      .profile-form-header {
+        border-radius: 15px 15px 0 0;
+      }
+      .profile-form-content {
+        background-color: $gray;
+        padding: 12px;
+        .profile-form-group {
+          padding: 0 12px;
+          margin-bottom: 15px;
+        }
+        .profile-form-input {
+          background-color: $dark;
+          padding: 6px 12px;
+          border-radius: 5px;
+          &::-webkit-calendar-picker-indicator{
+            filter: invert(1);
+            cursor: pointer;
+          }
+        }
+      }
+      .profile-form-footer {
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 0 0 15px 15px;
       }
     }
-
   }
 }
 
